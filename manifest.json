@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "BBC Visit Counter",
+  "version": "1.0",
+  "description": "Counts how many times you've visited bbc.com today.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked_page.html", "blocked_page_script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_page": "options.html"
+}

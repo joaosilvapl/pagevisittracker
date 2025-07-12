@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Blocked</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333; /* Dark background */
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .message {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 15px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .close-button {
+            background-color: #f44336; /* Red */
+            color: white;
+        }
+        .close-button:hover {
+            background-color: #d32f2f;
+        }
+        .let-me-in-button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        .let-me-in-button:hover {
+            background-color: #388E3C;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">hej</div>
+    <div class="button-container">
+        <button class="button close-button" id="closePageButton">Close the page</button>
+        <button class="button let-me-in-button" id="letMeInButton">Let me in</button>
+    </div>
+
+    <script src="blocked_page_script.js"></script>
+</body>
+</html>

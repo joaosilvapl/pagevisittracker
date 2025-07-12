@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visit Counter Settings</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            width: 600px;
+            background-color: #f0f2f5;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .tracked-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .tracked-item label {
+            margin-right: 10px;
+            min-width: 50px;
+        }
+        .tracked-item input[type="text"],
+        .tracked-item input[type="number"] {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+            box-sizing: border-box;
+        }
+        .tracked-item input[type="number"] {
+            width: 120px; /* Wider for minutes input */
+            flex-grow: 0;
+        }
+        .tracked-item button {
+            padding: 8px 12px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+        .tracked-item button:hover {
+            background-color: #c82333;
+        }
+        #addPageButton {
+            background-color: #28a745;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #addPageButton:hover {
+            background-color: #218838;
+        }
+        #saveAllButton {
+            background-color: #007bff;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #saveAllButton:hover {
+            background-color: #0056b3;
+        }
+        #statusMessage {
+            margin-top: 15px;
+            font-size: 14px;
+            color: green;
+        }
+        .note {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visit Counter Settings</h1>
+
+    <div id="trackedPagesContainer">
+        </div>
+
+    <button id="addPageButton">Add New Tracked Page</button>
+    <button id="saveAllButton">Save All Settings</button>
+    <div id="statusMessage"></div>
+
+    <div class="note">
+        Notes:
+        <ul>
+            <li>The URL should end with a forward slash (/) if it represents a domain, e.g., `https://www.bbc.com/`.</li>
+            <li>**Minutes Since Last Visit**: The page will be blocked if you visit it again before this many minutes have passed since your last visit.</li>
+        </ul>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+</html>
